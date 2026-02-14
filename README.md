@@ -7,16 +7,21 @@
 ## 特徴
 
 - **手軽な画像保存**: コマンド一発でクリップボードの画像をファイル化。
+- **マルチプラットフォーム対応**: macOS, Linux (X11/Wayland), WSL2 をサポート。
 - **ファイル名指定**: `-o` オプションで任意のファイル名を指定可能（拡張子自動補完あり）。
 - **自動命名**: ファイル名を指定しない場合、タイムスタンプベースのユニークなファイル名で保存。
 - **軽量**: Pythonスクリプトとして動作し、必要な依存関係も最小限。
 
 ## 必要要件
 
-- Linux (X11 environment recommended)
-- Python 3.x
-- `xclip` (Linuxでのクリップボード操作に必要)
-- Python Library: `Pillow`
+- **OS**: macOS, Linux (X11/Wayland), WSL2
+- **Python**: 3.x
+- **各環境のツール** (環境に応じて自動選択されます):
+  - **Linux (X11)**: `xclip` または `xsel`
+  - **Linux (Wayland)**: `wl-clipboard` (`wl-paste`)
+  - **WSL2**: `powershell.exe` (Windows 側にインストール済み)
+  - **macOS**: `pbpaste` / `osascript` (標準搭載)
+- **Python Library**: `Pillow`
 
 ## インストール
 
@@ -64,7 +69,7 @@
 
 ```bash
 ./clipboard2jpg.py -h  # ヘルプ表示
-./clipboard2jpg.py -v  # バージョン表示 (0.0.0)
+./clipboard2jpg.py -v  # バージョン表示 (0.1.0)
 ```
 
 ## エラーメッセージ
