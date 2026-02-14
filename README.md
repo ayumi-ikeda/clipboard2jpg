@@ -69,7 +69,7 @@
 
 ```bash
 ./clipboard2jpg.py -h  # ヘルプ表示
-./clipboard2jpg.py -v  # バージョン表示 (0.1.0)
+./clipboard2jpg.py -v  # バージョン表示 (0.1.1)
 ```
 
 ## エラーメッセージ

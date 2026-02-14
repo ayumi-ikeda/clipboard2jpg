@@ -10,7 +10,7 @@ import os
 import base64
 import platform
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 def get_unique_filename():
     """ユニークなファイル名を生成 (タイムスタンプベース)"""
